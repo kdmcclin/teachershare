@@ -6,7 +6,7 @@
 
   <% if session[:user_id] %>
     <ul><%@lessons.each do |lesson| %>
-      <li><%=lesson.created_at.to_s[5..10]%><a href=""><%= lesson.title %></a></li>
+      <li><%=lesson.created_at.to_s[5..10]%><a href='/lessons/<%=lesson.id%>'><%= lesson.title %></a></li>
       <% end %>
     </ul>
   <!--   <li><a href="/lessons/new"><button>Make a New Lesson</button></a></li> -->
