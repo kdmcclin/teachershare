@@ -7,3 +7,9 @@ post '/lessons' do
   @lesson = user.lessons.create(params[:lesson])
   redirect '/'
 end
+
+get '/lessons/:id' do
+  @lesson = Lesson.find(params[:id])
+  @user = @lesson.user
+  erb :'lessons/show'
+end
