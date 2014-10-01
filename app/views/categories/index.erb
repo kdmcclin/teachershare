@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>All Categories</h2>
+  <ul><%@categories.each do |category|%></ul>
+    <li><a href="/categories/<%=category.id%>/lessons"><%=category.category%></a></li>
+  <%end%>
+  <p></p>
+  <a href="/"><button>Home</button></a>
+</div>

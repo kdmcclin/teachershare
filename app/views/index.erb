@@ -2,7 +2,8 @@
   <h1>Welcome to TeacherShare!</h1>
   <h3>The site where teachers help teachers do teachery things.</h3>
 
-
+  <li><a href="/categories/all"><button>Search by Category</button></a></li>
+  <li><a href="/grade_levels/all"><button>Search by Grade Level</button></a></li>
 
   <% if session[:user_id] %>
     <ul><%@lessons.each do |lesson| %>

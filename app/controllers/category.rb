@@ -1,6 +1,6 @@
-get 'categories/all' do
+get '/categories/all' do
   @categories = Category.all.order("category ASC")
-  # erb :'/categories/index'
+  erb :'/categories/index'
 end
 
 get '/categories/:category_id/lessons' do

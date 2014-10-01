@@ -1,6 +1,6 @@
-get 'grade_levels/all' do
+get '/grade_levels/all' do
   @grade_levels = GradeLevel.all
-  # erb :'/grade_levels/index'
+  erb :'/grade_levels/index'
 end
 
 get '/grade_levels/:grade_level_id/lessons' do
