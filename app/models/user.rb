@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   include BCrypt
 
-  has_many :comments, :lessons
+  has_many :comments
+  has_many :lessons
 
   validates :username,  presence: true,
                         uniqueness: true

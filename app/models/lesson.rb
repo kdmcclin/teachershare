@@ -1,5 +1,7 @@
 class Lesson < ActiveRecord::Base
-  belongs_to :user, :grade_level, :category
+  belongs_to :user
+  belongs_to :grade_level
+  belongs_to :category
   has_many :comments
 
   validates :title, presence: true
