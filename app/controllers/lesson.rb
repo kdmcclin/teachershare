@@ -25,24 +25,7 @@ put '/lessons/:id' do
   #AJAX lesson editing later
 end
 
-# get '/lessons/:id/edit_confirmation' do
-#   if params[:error] == 'error'
-#     @error = "ERROR: USERNAME AND PASSWORD FOR LESSON DO NOT MATCH"
-#   end
-#   @lesson = Lesson.find(params[:id])
-#   erb :'/lessons/edit_confirmation'
-# end
-
-# post '/lessons/:id/edit_confirmation' do
-#   @lesson = Lesson.find(params[:id])
-#   if params[:username] == @lesson.user.username && params[:email] == @lesson.user.email
-#     redirect ("lessons/#{params[:id]}/edit")
-#   else
-#     redirect ("/lessons/#{params[:id]}/edit_confirmation?error=error")
-#   end
-# end
-
-delete '/articles/:id' do
+delete '/lessons/:id' do
   @lesson = Lesson.find(params[:id])
   Lesson.destroy(@lesson)
 
