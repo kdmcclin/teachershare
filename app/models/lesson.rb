@@ -5,6 +5,7 @@ class Lesson < ActiveRecord::Base
   has_many :comments
 
   validates :title, presence: true
+  validates :objective, presence: true
   validates :warmup, presence: true
   validates :main, presence: true
   validates :homework, presence: true
