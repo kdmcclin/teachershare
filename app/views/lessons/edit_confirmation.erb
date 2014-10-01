@@ -1,0 +1,12 @@
+<div class="container">
+  <h2> Edit Confirmation </h2>
+  <% if @error %>
+  <p><%= @error %></p>
+  <%end%>
+  <form action="/lessons/<%=@lesson.id%>/edit_confirmation" method="post">
+    <p>Input Username: <input name="username" type="text"></p>
+    <p>Input Password: <input type="password" name="password" type="text"></p>
+    <input type="submit" value="Edit Post">
+  </form>
+  <p>
+</div>
