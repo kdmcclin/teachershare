@@ -1,4 +1,4 @@
 get '/' do
-  # @lessons = Lesson.all
+  @lessons = Lesson.all
   erb :index
 end
