@@ -1,10 +1,18 @@
 <div class="container">
   <h1>Welcome to TeacherShare!</h1>
   <h3>The site where teachers help teachers do teachery things.</h3>
+
+  <!-- <ul><%@lessons.each do |lesson| %>
+    <li><%=lesson.created_at.to_s[5..10]%><a href=""><%= lesson.title %></a></li>
+    <% end %>
+  </ul> -->
+
   <% if session[:user_id] %>
     <li><a href=""><button>Make a New Post</button></a></li>
     <p></p>
     <li><a href=""><button>Log Out</button></a></li>
+
+
   <% else %>
     <li><a href=""><button>Sign Up</button></a></li>
     <p></p>
