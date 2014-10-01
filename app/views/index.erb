@@ -1,21 +1,14 @@
-<div class="container">
+<div class="content-container">
   <h1>Welcome to TeacherShare!</h1>
   <h3>The site where teachers help teachers do teachery things.</h3>
-
-  <li><a href="/categories/all"><button>Search by Category</button></a></li>
-  <li><a href="/grade_levels/all"><button>Search by Grade Level</button></a></li>
 
   <% if session[:user_id] %>
     <ul><%@lessons.each do |lesson| %>
       <li><%=lesson.created_at.to_s[5..10]%><a href='/lessons/<%=lesson.id%>'><%= lesson.title %></a></li>
       <% end %>
     </ul>
-  <!--   <li><a href="/lessons/new"><button>Make a New Lesson</button></a></li> -->
-    <p></p>
-    <li><a href="/logout"><button>Log Out</button></a></li>
   <% else %>
-    <li><a href="/signup"><button>Sign Up</button></a></li>
-    <p></p>
-    <li><a href="/login"><button>Log In</button></a></li>
+    <p>Please sign up and/or log in to view lesson plans.</p>
   <% end %>
 </div>
+  <!--   <li><a href="/lessons/new"><button>Make a New Lesson</button></a></li> -<>-PUT THIS SOMEWHERE -->

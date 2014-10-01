@@ -18,15 +18,23 @@
   <title></title>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="/img/boxcontents.png">
-      <a href="/">TeacherShare></a>
-    </div>
-  <nav>
-
-  </nav>
-  </header>
-  <%= yield %>
+  <div class="container">
+    <header>
+      <div class="logo"></div>
+    </header>
+      <nav>
+        <ul>
+          <% if session[:user_id] %>
+            <li><a href="/categories/all">Search by Category</a></li>
+            <li><a href="/grade_levels/all">Search by Grade Level</a></li>
+            <li><a href="/logout">Log Out</a></li>
+          <%else%>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Log In</a></li>
+          <%end%>
+        </ul>
+      </nav>
+    <%= yield %>
+  </div>
 </body>
 </html>

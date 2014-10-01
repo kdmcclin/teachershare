@@ -1,12 +1,68 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 5px dashed black;
+body{
+  background-image: url('/img/stressed_linen_@2X.png');
+}
+
+.container{
+  margin: 0 auto;
+  width: 1000px;
+  background: #fff;
+}
+
+.content-container{
+  float: left;
+  width: 980px;
+  background: #ffffff;
+  padding-left: 20px;
+}
+
+.content{
+  float: left;
+  width: 800px;
+  margin: 0 auto;
+}
+
+header{
+  background-image: url('/img/stressed_linen_@2X.png');
+  height: 100px;
+}
+
+nav{
+  float: left;
+  width: 1000px;
+  background: #41c14a;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline;
+}
+
+nav li a{
+  display: block;
+  float: left;
+  padding: 5px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-right: 1px solid #ffffff;
+}
+
+nav li a:hover{
+  background: #5f9ea0;
+  color: #fff;
 }
 
 a {
+  color: #cc0000;
 	text-decoration: none;
+}
+
+a:hover{
+  color: purple;
 }
 
 li {
@@ -14,5 +70,6 @@ li {
 }
 
 textarea {
-  width: 100%;
+  width: 99%;
 }
+
