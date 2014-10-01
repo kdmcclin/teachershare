@@ -1,0 +1,24 @@
+<div class="container">
+  <h2><%= @lesson.title %></h2>
+
+  <p>Posted <i> on: <%= @lesson.created_at.to_s[0..10]%> </i></p>
+  <p>Posted by: <%= @lesson.user.username %></a></p>
+  <b>Title:</b><br>
+    <%=@lesson.title%>
+    <p>
+  <b>Objective:</b><br>
+    <%=@lesson.objective%>
+    <p>
+  <b>Warmup:</b><br>
+    <%=@lesson.warmup%>
+    <p>
+  <b>Main Lesson:</b><br>
+    <%=@lesson.main%>
+    <p>
+  <b>Homework:</b><br>
+    <%=@lesson.homework%>
+    <p>
+</div>
+
+<!-- add later to line 5 <a href="/user/<%= @user.id %>"> -->
+<!-- Implement comments later -->
