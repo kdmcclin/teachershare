@@ -11,6 +11,14 @@
       <textarea name="lesson[main]" type="text" placeholder="Put the main body of your lesson plan here"></textarea></p>
     <p>Homework: <br>
       <textarea name="lesson[homework]" type="text" placeholder="If there is no homework for this lesson, please indicate that here"></textarea></p>
+    <p>Category:</p>
+    <% Category.all.each do |category| %>
+    <input type="radio" name="lesson[category_id]" value="<%=category.id %>"> <%=category.category%><p></p>
+    <%end%>
+    <p>Grade Level:</p>
+    <% GradeLevel.all.each do |level| %>
+    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>"> <%=level.level%><p></p>
+    <%end%>
     <input type="submit" value="Submit">
   </form>
   <p>
