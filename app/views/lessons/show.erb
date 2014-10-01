@@ -20,6 +20,11 @@
   <b>Homework:</b><br>
     <%=@lesson.homework%>
     <p>
+  <% if session[:user_id] == @lesson.user_id%>
+    <form action="/lessons/<%= @lesson.id %>/edit">
+      <input type="submit" value="Edit Lesson Plan">
+    </form>
+  <%end%>
 </div>
 
 <!-- add later to line 5 <a href="/user/<%= @user.id %>"> -->
