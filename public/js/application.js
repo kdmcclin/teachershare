@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("form").submit(function(event){
-    formStatus();
+    formStatus(event);
   });
 
   $("#comment-form").submit(function(event){
@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 var formStatus = function(event){
   if ($(".submittable").val("")){
+    event.preventDefault();
     alert("Please make sure that all fields are filled in.");
-  }
+  };
 };
