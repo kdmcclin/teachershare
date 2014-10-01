@@ -20,10 +20,33 @@
   <b>Homework:</b><br>
     <%=@lesson.homework%>
     <p>
+
   <% if session[:user_id] == @lesson.user_id%>
     <form action="/lessons/<%= @lesson.id %>/edit">
       <input type="submit" value="Edit Lesson Plan">
     </form>
+  <%end%>
+
+  <h3>Comments on this lesson:</h3>
+  <div class="comment-display">
+    <% @comments.each do |comment|%>
+      <%=
+        erb :'lessons/_comment',
+        :layout => false,
+        :locals => { user: @user, comment: comment}
+      %>
+    <% end %>
+  </div>
+
+  <% if session[:user_id] %>
+      <h2> Add a comment to this lesson plan:</h2>
+      <form action="/lessons/<%=@lesson.id%>/comments" method="POST" id='comment-form'>
+        <input type='hidden' name='comment[lesson_id]' value='<%= @lesson.id %>'>
+        <textarea id="comment-body" name="comment[content]" type="text"></textarea>
+        <p></p>
+        <input class='comment-btn' type="submit" name="submit">
+      </form>
+      <p></p>
   <%end%>
 </div>
 

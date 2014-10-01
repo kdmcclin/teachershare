@@ -1,0 +1,8 @@
+<div class="container">
+  <h2> Comment on this lesson plan:</h2>
+  <form action="/lessons/<%=@lesson.id%>/comments" method="POST">
+    <textarea name="comment[content]" type="text"></textarea>
+    <p></p>
+    <input type="submit" name="submit">
+  </form>
+</div>

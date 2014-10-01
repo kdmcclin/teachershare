@@ -11,12 +11,13 @@ end
 get '/lessons/:id' do
   @lesson = Lesson.find(params[:id])
   @user = @lesson.user
+  @comments = @lesson.comments
   erb :'lessons/show'
 end
 
 get '/lessons/:id/edit' do
   @lesson = Lesson.find(params[:id])
-  erb :'/lessons/edit'
+  erb :'lessons/edit'
 end
 
 put '/lessons/:id' do
@@ -30,4 +31,25 @@ delete '/lessons/:id' do
   Lesson.destroy(@lesson)
 
   redirect '/'
+end
+
+post '/lessons/:id/comments/new' do
+  @lesson = Lesson.find(params[:id])
+  erb :'comments/new'
+end
+
+post '/lessons/:id/comments' do
+  lesson = Lesson.find(params[:comment][:lesson_id])
+  user = User.find(session[:user_id])
+  comment = lesson.comments.create(params[:comment])
+  comment.user = user
+  comment.save
+  if request.xhr?
+    response = erb :'/lessons/_comment',
+    :layout => false,
+    :locals => { user: user, comment: comment}
+    return response
+  else
+    redirect "/lessons/#{lesson.id}"
+  end
 end
