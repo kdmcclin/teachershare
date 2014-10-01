@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $("form").submit(function(event){
+    formStatus();
+  });
+
   $("#comment-form").submit(function(event){
     event.preventDefault();
     $.ajax({
@@ -12,3 +16,9 @@ $(document).ready(function() {
     });
   });
 });
+
+var formStatus = function(event){
+  if ($(".submittable").val("")){
+    alert("Please make sure that all fields are filled in.");
+  }
+};
