@@ -20,10 +20,10 @@ class User < ActiveRecord::Base
   end
 
   def self.authenticate(user_info)
-    email = user_info[:email]
+    username = user_info[:username]
     password = user_info[:password]
 
-    user = User.find_by(email: email)
+    user = User.find_by(username: username)
     return user if user && user.password == password
     nil
   end
