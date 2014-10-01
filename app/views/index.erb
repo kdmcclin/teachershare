@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Welcome to TeacherShare!</h1>
+  <h3>The site where teachers help teachers do teachery things.</h3>
+  <% if session[:user_id] %>
+    <li><a href=""><button>Make a New Post</button></a></li>
+    <p></p>
+    <li><a href=""><button>Log Out</button></a></li>
+  <% else %>
+    <li><a href=""><button>Sign Up</button></a></li>
+    <p></p>
+    <li><a href=""><button>Log In</button></a></li>
+  <% end %>
+</div>
