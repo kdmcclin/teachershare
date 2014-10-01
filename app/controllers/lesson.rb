@@ -13,3 +13,18 @@ get '/lessons/:id' do
   @user = @lesson.user
   erb :'lessons/show'
 end
+
+get '/lessons/:id/edit' do
+  @lesson = Lesson.find(params[:id])
+  erb :'/lessons/edit'
+end
+
+put '/lessons/:id' do
+  Lesson.update(params[:id], params[:lesson])
+  redirect ("lessons/#{params[:id]}")
+  #AJAX lesson editing later
+end
+
+# get '/lessons/:id/edit_conformation' do
+
+# end
