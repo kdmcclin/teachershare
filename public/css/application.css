@@ -2,6 +2,21 @@ body{
   background-image: url('/img/stressed_linen_@2X.png');
 }
 
+h1{
+  font-family: 'Permanent Marker', cursive;
+  color: #DADADA;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  color: #DADADA;
+  font-size: 2em;
+}
+
+#main-h3{
+  color: #DADADA;
+}
+
 .container{
   margin: 0 auto;
   width: 1000px;
@@ -47,7 +62,7 @@ nav li a{
   display: block;
   float: left;
   padding: 5px 10px;
-  color: #ECECEC;
+  color: #DADADA;
   text-decoration: none;
   border-right: 1px solid #ffffff;
 }
@@ -58,7 +73,7 @@ nav li a:hover{
 }
 
 a {
-  color: #ECECEC;
+  color: #DADADA;
 	text-decoration: none;
 }
 
@@ -68,6 +83,12 @@ a:hover{
 
 li {
 	list-style-type: none;
+}
+
+.comment-content{
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 2em;
+  color: grey;
 }
 
 textarea {

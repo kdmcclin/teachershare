@@ -1,5 +1,8 @@
 <div class="content-container">
   <h2><%= @lesson.title %></h2>
+    <% if session[:user_id] == @lesson.user_id%>
+      <a href="/lessons/<%= @lesson.id %>/edit">*Edit Lesson Plan*</a>
+    <%end%>
 
   <p>Posted <i> on: <%= @lesson.created_at.to_s[0..10]%> </i></p>
   <p>Posted by: <%= @lesson.user.username %></a></p>
@@ -20,12 +23,6 @@
   <b>Homework:</b><br>
     <%=@lesson.homework%>
     <p>
-
-  <% if session[:user_id] == @lesson.user_id%>
-    <form action="/lessons/<%= @lesson.id %>/edit">
-      <input type="submit" value="Edit Lesson Plan">
-    </form>
-  <%end%>
 
   <h3>Comments on this lesson:</h3>
   <div class="comment-display">
@@ -51,4 +48,3 @@
 </div>
 
 <!-- add later to line 5 <a href="/user/<%= @user.id %>"> -->
-<!-- Implement comments later -->
