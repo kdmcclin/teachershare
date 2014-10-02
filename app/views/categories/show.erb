@@ -1,4 +1,4 @@
-<div class="container">
+<div class="content-container">
   <h2> Lessons Plans in <%= @category_name %></h2>
   <ul><% @lesson_collection.each do |lesson| %>
     <li><%=lesson.created_at.to_s[5..10]%>  <a href="/lessons/<%= lesson.id %>"><%= lesson.title %></a></li>
@@ -9,6 +9,4 @@
   <p>
   <a href="/articles/all"><button>View All Posts</button></a>
   <p> -->
-  <a href="/"><button>Home</button></a>
-
 </div>

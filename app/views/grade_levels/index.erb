@@ -1,8 +1,7 @@
-<div class="container">
+<div class="content-container">
   <h2>All Grade Levels</h2>
   <ul><%@grade_levels.each do |level|%></ul>
     <li><a href="/grade_levels/<%=level.id%>/lessons"><%=level.level%></a></li>
   <%end%>
   <p></p>
-  <a href="/"><button>Home</button></a>
 </div>
