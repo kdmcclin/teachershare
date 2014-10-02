@@ -5,7 +5,6 @@ body{
 .container{
   margin: 0 auto;
   width: 1000px;
-  background: #fff;
 }
 
 .content-container{
@@ -23,8 +22,9 @@ body{
 }
 
 header{
-  background-image: url('/img/stressed_linen_@2X.png');
+  width: 1000px;
   height: 100px;
+  background-color: rgba(255,255,255,0.1);
 }
 
 nav{
@@ -47,7 +47,7 @@ nav li a{
   display: block;
   float: left;
   padding: 5px 10px;
-  color: #ffffff;
+  color: #ECECEC;
   text-decoration: none;
   border-right: 1px solid #ffffff;
 }
@@ -58,12 +58,12 @@ nav li a:hover{
 }
 
 a {
-  color: #cc0000;
+  color: #ECECEC;
 	text-decoration: none;
 }
 
 a:hover{
-  color: purple;
+  color: #000;
 }
 
 li {
