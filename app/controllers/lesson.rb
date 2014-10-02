@@ -39,15 +39,18 @@ post '/lessons/:id/comments/new' do
 end
 
 post '/lessons/:id/comments' do
+  #step 2
   lesson = Lesson.find(params[:comment][:lesson_id])
   user = User.find(session[:user_id])
   comment = lesson.comments.create(params[:comment])
   comment.user = user
   comment.save
   if request.xhr?
+    #step 3
     response = erb :'/lessons/_comment',
     :layout => false,
     :locals => { user: user, comment: comment}
+    #step 5
     return response
   else
     redirect "/lessons/#{lesson.id}"
