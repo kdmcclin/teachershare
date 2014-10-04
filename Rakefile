@@ -1,4 +1,6 @@
 require 'rake'
+require 'bcrypt'
+require 'sinatra/reloader'
 
 require ::File.expand_path('../config/environment', __FILE__)
 

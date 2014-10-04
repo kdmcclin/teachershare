@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
+gem 'thin'
+
 # PostgreSQL driver
 gem 'pg'
 
@@ -15,6 +17,8 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt'
+
+gem 'sinatra-reloader'
 
 group :test do
   gem 'shoulda-matchers'
