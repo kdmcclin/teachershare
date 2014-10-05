@@ -13,6 +13,14 @@ h2 {
   font-size: 2em;
 }
 
+p {
+  color: #DADADA;
+}
+
+.radio {
+  color: #fff;
+}
+
 #main-h3{
   color: #DADADA;
 }
