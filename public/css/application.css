@@ -18,7 +18,7 @@ p {
 }
 
 .radio {
-  color: #fff;
+  color: #DADADA;
 }
 
 #main-h3{
@@ -91,6 +91,7 @@ a:hover{
 
 li {
 	list-style-type: none;
+  color: #dadada;
 }
 
 .comment-content{
