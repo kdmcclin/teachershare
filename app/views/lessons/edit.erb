@@ -12,11 +12,11 @@
         <textarea name="lesson[homework]" type="text"><%= @lesson.homework %> </textarea></p>
     <p>Category: </p>
    <% Category.all.each do |category| %>
-    <input type="radio" name="lesson[category_id]" value="<%=category.id %>"> <%=category.category%><p></p>
+    <input type="radio" name="lesson[category_id]" value="<%=category.id %>"> <span class="radio"><%=category.category%></span><p></p>
     <%end%>
     <p>Grade Level:</p>
     <% GradeLevel.all.each do |level| %>
-    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>"> <%=level.level%><p></p>
+    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>"> <span class="radio"><%=level.level%></span><p></p>
     <%end%>
     <input type="submit" value="Save">
     <input type="hidden" name="_method" value="put">
