@@ -1,29 +1,29 @@
 <div class="content-container">
   <form action = "/lessons/<%= @lesson.id %>" method = "post">
     <p>Title: <br>
-        <input name="lesson[title]" type="text" value="<%= @lesson.title %>"> </p>
+        <input name="lesson[title]" type="text" value="<%= @lesson.title %>" class="black"> </p>
     <p>Objective: <br>
-        <textarea name="lesson[objective]" type="text"><%= @lesson.objective %></textarea></p>
+        <textarea name="lesson[objective]" type="text" class="black"><%= @lesson.objective %></textarea></p>
     <p>Warmup: <br>
-        <textarea name="lesson[warmup]" type="text"><%= @lesson.warmup %></textarea></p>
+        <textarea name="lesson[warmup]" type="text" class="black"><%= @lesson.warmup %></textarea></p>
     <p>Main Lesson: <br>
-        <textarea name ="lesson[main]" type="text"><%= @lesson.main%></textarea>
+        <textarea name ="lesson[main]" type="text" class="black"><%= @lesson.main%></textarea>
     <p>Homework: <br>
-        <textarea name="lesson[homework]" type="text"><%= @lesson.homework %> </textarea></p>
+        <textarea name="lesson[homework]" type="text" class="black"><%= @lesson.homework %> </textarea></p>
     <p>Category: </p>
    <% Category.all.each do |category| %>
-    <input type="radio" name="lesson[category_id]" value="<%=category.id %>"> <span class="radio"><%=category.category%></span><p></p>
+    <input type="radio" name="lesson[category_id]" value="<%=category.id %>" class="black"> <span class="radio"><%=category.category%></span><p></p>
     <%end%>
     <p>Grade Level:</p>
     <% GradeLevel.all.each do |level| %>
-    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>"> <span class="radio"><%=level.level%></span><p></p>
+    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>" class="black"> <span class="radio"><%=level.level%></span><p></p>
     <%end%>
-    <input type="submit" value="Save">
+    <input type="submit" value="Save" class="black">
     <input type="hidden" name="_method" value="put">
   </form>
  <p>
   <form action = "/lessons/<%= @lesson.id %>" method="post">
-    <input type="submit" value="Delete">
+    <input type="submit" value="Delete" class="black">
     <input type="hidden" name="_method" value="delete">
   </form>
 </div>

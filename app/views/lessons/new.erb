@@ -2,24 +2,24 @@
   <h2>Add a New Lesson Plan</h2>
   <form action= "/lessons" method= "post">
     <p>Title: <br>
-      <input name="lesson[title]" type="text" placeholder="Lesson title" class="submittable"></p>
+      <input name="lesson[title]" type="text" placeholder="Lesson title" class="submittable black"></p>
     <p>Objective:<br>
-      <textarea name="lesson[objective]" type="text" placeholder="Please supply an objective for this lesson" class="submittable"></textarea></p>
+      <textarea name="lesson[objective]" type="text" placeholder="Please supply an objective for this lesson" class="submittable black"></textarea></p>
     <p>Warmup: <br>
-      <textarea name="lesson[warmup]" type="text" placeholder="If your lesson does not include a warmup, please indicate that here" class="submittable"></textarea></p>
+      <textarea name="lesson[warmup]" type="text" placeholder="If your lesson does not include a warmup, please indicate that here" class="submittable black"></textarea></p>
     <p>Main Lesson: <br>
-      <textarea name="lesson[main]" type="text" placeholder="Put the main body of your lesson plan here" class="submittable"></textarea></p>
+      <textarea name="lesson[main]" type="text" placeholder="Put the main body of your lesson plan here" class="submittable black"></textarea></p>
     <p>Homework: <br>
-      <textarea name="lesson[homework]" type="text" placeholder="If there is no homework for this lesson, please indicate that here" class="submittable"></textarea></p>
+      <textarea name="lesson[homework]" type="text" placeholder="If there is no homework for this lesson, please indicate that here" class="submittable black"></textarea></p>
     <p>Category:</p>
     <% Category.all.each do |category| %>
-    <input type="radio" name="lesson[category_id]" value="<%=category.id %>" class="submittable"> <span class="radio"><%=category.category%></span><p></p>
+    <input type="radio" name="lesson[category_id]" value="<%=category.id %>" class="submittable black"> <span class="radio"><%=category.category%></span><p></p>
     <%end%>
     <p>Grade Level:</p>
     <% GradeLevel.all.each do |level| %>
-    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>" class="submittable"> <span class="radio"><%=level.level%></span><p></p>
+    <input type="radio" name="lesson[grade_level_id]" value="<%=level.id %>" class="submittable black"> <span class="radio"><%=level.level%></span><p></p>
     <%end%>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" class="black">
   </form>
   <p>
 </div>

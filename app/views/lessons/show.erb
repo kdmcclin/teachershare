@@ -39,9 +39,9 @@
       <h2> Add a comment to this lesson plan:</h2>
       <form action="/lessons/<%=@lesson.id%>/comments" method="POST" id='comment-form'>
         <input type='hidden' name='comment[lesson_id]' value='<%= @lesson.id %>'>
-        <textarea id="comment-body" name="comment[content]" type="text"></textarea>
+        <textarea id="comment-body" name="comment[content]" type="text" class="black"></textarea>
         <p></p>
-        <input class='comment-btn' type="submit" name="submit">
+        <input class='comment-btn black' type="submit" name="submit">
       </form>
       <p></p>
   <%end%>
